@@ -121,7 +121,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 		req.send( null );
 		var split = req.responseText.split(",");
 		var kret = new Kret( Math.floor( Math.random() * ( X_MAX + 1 ) ), Math.floor( Math.random() * ( Y_MAX + 1 ) ),
-		  split[0], split[1], split[2] );
+		  split[0], split[1], Math.min( split[2], 255 ) );
 		krets.add( kret );
 		krets.forEach( function(kret) {
 		    var x = kret.x, y = kret.y;
@@ -195,7 +195,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 		        board[newOffset] = kret;
 		        board[offset] = undefined;
 		    }
-		    circle( kret.x, kret.y, RADIUS, kret.str, kret.dex, Math.floor(kret.hp) );
+		    circle( kret.x, kret.y, RADIUS, Math.floor(kret.hp), kret.dex, kret.str );
 		} );
 		
 		i++;

@@ -11,22 +11,27 @@ body {
   background-image: url("../assets/background.jpg");
 }
 
+.margin {
+    margin: 20px 0 0 20px;
+}
+
 #renderCanvas1 {
     border: 5px ridge rgba(128,128,128,0.5);
-    margin: 20px 0 0 20px;
     padding: 0;
 }
 
 #renderCanvas2 {
     border: 5px /*dotted*/ ridge rgba(128,128,128,0.5);
-    margin: 20px 0 0 20px;
     padding: 0;
 }
 
 #outputCount {
-   margin: 20px 0 0 20px;
    padding-left: 40px;
    font-family: Arial, sans-serif;
    font-weight: bold;
    font-size: 200%;
+}
+
+#audio {
+   padding-left: 40px;
 }
